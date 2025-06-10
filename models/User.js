@@ -20,6 +20,24 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 4
     },
+    emailSettings: {
+        weeklyReport: {
+            type: Boolean,
+            default: true
+        },
+        dailyReminders: {
+            type: Boolean,
+            default: true
+        },
+        milestoneNotifications: {
+            type: Boolean,
+            default: true
+        },
+        reminderTime: {
+            type: String,
+            default: '20:00'
+        }
+    },
     createdAt: {
         type: Date,
         default: Date.now
